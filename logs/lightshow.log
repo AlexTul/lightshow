@@ -1,0 +1,953 @@
+19:14:39.976 [main] INFO  c.n.a.modulthird.LightshowApp - Light 'light' changed color from 'white' to 'black' at {{ISO timestamp}}
+19:15:55.376 [main] INFO  c.n.a.modulthird.LightshowApp - Light 'light' changed color from 'white' to 'black' at {ISO timestamp}
+19:16:25.737 [main] INFO  c.n.a.modulthird.LightshowApp - Light 'light' changed color from 'white' to 'black' at {{ISO timestamp}}
+19:20:46.738 [main] INFO  c.n.a.modulthird.LightshowApp - Light 'light' changed color from 'white' to 'black' at {{ISO timestamp}}
+19:21:12.230 [main] INFO  c.n.a.modulthird.LightshowApp - Light 'light' changed color from 'white' to 'black' at 1666310400000
+19:21:31.772 [main] INFO  c.n.a.modulthird.LightshowApp - Light 'light' changed color from 'white' to 'black' at 2022-10-21 03:00:00.0
+19:27:24.794 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:27:27.483 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:27:27.518 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:27:28.334 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:27:28.506 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:27:31.489 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:28:15.474 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:28:17.765 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:28:17.801 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:28:18.664 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:28:18.873 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:28:22.031 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:29:33.618 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:29:33.628 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:29:33.628 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:141)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:31:54.638 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:32:03.824 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:32:03.955 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:32:11.046 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:32:11.544 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:32:23.965 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:34:17.908 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s776ms529µs700ns).
+19:34:27.318 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:34:27.352 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:34:36.596 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+java.util.InputMismatchException: null
+	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+	at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextLong(Scanner.java:2373)
+	at java.base/java.util.Scanner.nextLong(Scanner.java:2328)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:39)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+19:35:08.126 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:35:10.543 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:35:10.576 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:35:11.387 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:35:11.560 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:35:14.214 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:35:45.894 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:35:45.918 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:35:45.933 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:141)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:37:05.038 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:37:07.295 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:37:07.328 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:37:08.114 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:37:08.297 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:37:11.002 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:37:41.151 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:37:41.156 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:37:41.157 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:141)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:58)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:39:43.426 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:39:45.994 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:39:46.027 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:39:46.768 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:39:46.978 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:39:50.405 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:40:02.350 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:40:02.369 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:40:02.370 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: There are non-existent colors in the list like 'white black brown red orange yellow green blue purple grey'
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:41)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+19:40:24.545 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:40:27.049 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:40:27.083 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:40:27.858 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:40:28.001 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:40:30.632 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:40:56.271 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:40:58.700 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:40:58.732 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:40:59.492 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:40:59.650 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:41:02.243 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:41:11.202 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:41:11.208 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:41:11.209 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:141)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:42:29.005 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:42:48.955 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:42:49.075 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:42:56.096 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:42:56.487 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:43:18.805 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:43:21.321 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:43:21.357 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:43:22.222 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:43:22.398 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:43:25.420 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:44:39.240 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s800ms746µs200ns).
+19:45:45.095 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s855ms67µs200ns).
+19:47:54.256 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s879ms956µs600ns).
+19:48:51.688 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s432ms318µs500ns).
+19:50:16.808 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s120ms743µs800ns).
+19:51:05.843 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:51:05.865 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:51:08.486 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:141)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:51:47.680 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:51:50.272 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:51:50.308 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:51:51.206 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:51:51.354 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:51:54.617 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:52:37.535 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:52:37.542 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:52:37.543 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:141)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:54:26.092 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:54:28.694 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:54:28.728 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:54:29.619 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:54:29.799 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:54:33.326 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:58:01.340 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m31s613ms197µs300ns).
+19:58:01.372 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:58:01.384 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:58:01.385 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:144)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at java.base/java.util.Arrays$ArrayList.get(Arrays.java:4165)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:66)
+	... 4 common frames omitted
+19:58:14.315 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+19:58:17.071 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+19:58:17.110 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:58:18.131 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:58:18.314 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19:58:21.516 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19:59:22.567 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:59:22.577 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+19:59:22.578 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:142)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.nixsolutions.alextuleninov.modulthird.model.Color.setName(String)" because the return value of "com.nixsolutions.alextuleninov.modulthird.model.Light.getColor()" is null
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:67)
+	... 4 common frames omitted
+20:02:34.534 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:02:37.054 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:02:37.109 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:02:38.025 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:02:38.185 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:02:41.476 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:03:58.626 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+20:03:58.628 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: null значення в стовпці "color_id" відношення "lights" порушує not-null обмеження
+  Подробности: Помилковий рядок містить (1, brille, null, f).
+20:04:15.729 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:04:15.755 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:04:16.480 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:143)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:175)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:182)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:741)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:719)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:71)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:95)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3285)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3895)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:735)
+	... 6 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: null значення в стовпці "color_id" відношення "lights" порушує not-null обмеження
+  Подробности: Помилковий рядок містить (1, brille, null, f).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 24 common frames omitted
+20:10:45.475 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:10:47.993 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:10:48.032 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:10:48.910 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:10:49.081 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:10:52.559 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:11:57.368 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s353ms920µs900ns).
+20:17:29.555 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:17:32.065 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:17:32.105 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:17:32.994 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:17:33.165 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:17:36.482 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:18:06.997 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+20:18:06.998 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+20:18:21.053 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:18:21.086 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:18:21.834 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:148)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:374)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1032)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:70)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:253)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:146)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.lambda$processNext$0(JdbcValuesResultSetImpl.java:89)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:274)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:89)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:142)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:102)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2750)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2742)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:75)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:153)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:98)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:143)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:102)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:546)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	... 7 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:217)
+	... 36 common frames omitted
+20:34:39.209 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:34:41.747 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:34:41.783 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:34:42.645 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:34:42.801 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:34:46.017 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:35:41.386 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s629ms214µs100ns).
+20:36:03.388 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:36:03.420 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:36:05.522 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.IllegalArgumentException: Argument [7] of type [java.lang.Integer] did not match parameter type [java.lang.String (n/a)]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:149)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.IllegalArgumentException: Argument [7] of type [java.lang.Integer] did not match parameter type [java.lang.String (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:84)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:31)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:339)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:129)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:949)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:732)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:129)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:70)
+	... 4 common frames omitted
+20:39:29.576 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:39:32.571 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:39:32.624 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:39:33.573 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:39:33.750 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:39:37.140 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:40:30.610 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+20:40:30.612 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+20:45:31.658 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m26s717ms705µs500ns).
+20:45:31.703 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:45:31.711 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:45:31.711 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:149)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:374)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1032)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:71)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:253)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:146)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.lambda$processNext$0(JdbcValuesResultSetImpl.java:89)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:274)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:89)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:142)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:102)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2750)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2742)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:75)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:153)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:98)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:143)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:102)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:546)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	... 7 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:217)
+	... 36 common frames omitted
+20:45:47.150 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:45:50.042 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:45:50.093 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:45:51.026 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:45:51.195 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:45:54.294 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:46:40.702 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+20:46:40.703 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+20:46:42.924 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:46:42.940 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:46:42.941 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:151)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:374)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1032)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:71)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:253)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:146)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.lambda$processNext$0(JdbcValuesResultSetImpl.java:89)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:274)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:89)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:142)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:102)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2750)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2742)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:75)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:153)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:98)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:143)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:102)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:546)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	... 7 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:217)
+	... 36 common frames omitted
+20:53:10.027 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:53:12.968 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:53:13.010 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:53:14.301 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:53:14.564 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:53:17.925 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:53:52.092 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:53:52.133 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:53:53.387 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.IllegalArgumentException: org.hibernate.query.SemanticException: Unlabeled ordinal parameter ('?' rather than ?1)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:151)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.IllegalArgumentException: org.hibernate.query.SemanticException: Unlabeled ordinal parameter ('?' rather than ?1)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:175)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:182)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:761)
+	at org.hibernate.internal.SessionImpl.createQuery(SessionImpl.java:186)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:68)
+	... 4 common frames omitted
+Caused by: org.hibernate.query.SemanticException: Unlabeled ordinal parameter ('?' rather than ?1)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitPositionalParameter(SemanticQueryBuilder.java:3487)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitPositionalParameter(SemanticQueryBuilder.java:3480)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitPositionalParameter(SemanticQueryBuilder.java:244)
+	at org.hibernate.grammars.hql.HqlParser$PositionalParameterContext.accept(HqlParser.java:9896)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitParameterExpression(SemanticQueryBuilder.java:3456)
+	at org.hibernate.grammars.hql.HqlParser$ParameterExpressionContext.accept(HqlParser.java:6900)
+	at org.antlr.v4.runtime.tree.AbstractParseTreeVisitor.visitChildren(AbstractParseTreeVisitor.java:46)
+	at org.hibernate.grammars.hql.HqlParserBaseVisitor.visitBarePrimaryExpression(HqlParserBaseVisitor.java:671)
+	at org.hibernate.grammars.hql.HqlParser$BarePrimaryExpressionContext.accept(HqlParser.java:6450)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitComparisonPredicate(SemanticQueryBuilder.java:2109)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitComparisonPredicate(SemanticQueryBuilder.java:244)
+	at org.hibernate.grammars.hql.HqlParser$ComparisonPredicateContext.accept(HqlParser.java:5504)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:1952)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitWhereClause(SemanticQueryBuilder.java:244)
+	at org.hibernate.grammars.hql.HqlParser$WhereClauseContext.accept(HqlParser.java:5303)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuery(SemanticQueryBuilder.java:858)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:630)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitQuerySpecExpression(SemanticQueryBuilder.java:244)
+	at org.hibernate.grammars.hql.HqlParser$QuerySpecExpressionContext.accept(HqlParser.java:1218)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:624)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSimpleQueryGroup(SemanticQueryBuilder.java:244)
+	at org.hibernate.grammars.hql.HqlParser$SimpleQueryGroupContext.accept(HqlParser.java:1131)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitSelectStatement(SemanticQueryBuilder.java:400)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.visitStatement(SemanticQueryBuilder.java:359)
+	at org.hibernate.query.hql.internal.SemanticQueryBuilder.buildSemanticModel(SemanticQueryBuilder.java:286)
+	at org.hibernate.query.hql.internal.StandardHqlTranslator.translate(StandardHqlTranslator.java:81)
+	at org.hibernate.internal.AbstractSharedSessionContract.lambda$createQuery$2(AbstractSharedSessionContract.java:748)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.createHqlInterpretation(QueryInterpretationCacheStandardImpl.java:141)
+	at org.hibernate.query.internal.QueryInterpretationCacheStandardImpl.resolveHqlInterpretation(QueryInterpretationCacheStandardImpl.java:128)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:745)
+	... 6 common frames omitted
+20:56:37.485 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+20:56:40.366 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+20:56:40.398 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:56:41.296 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:56:41.450 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+20:56:44.541 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:58:02.797 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s393ms528µs).
+20:59:53.547 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m50s750ms575µs300ns).
+20:59:54.025 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+20:59:54.026 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+21:00:03.363 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:00:03.420 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:00:04.986 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:151)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:374)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1032)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:71)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:253)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:146)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.lambda$processNext$0(JdbcValuesResultSetImpl.java:89)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:274)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:89)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:142)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:102)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2750)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2742)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:75)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:153)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:98)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:143)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:102)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:546)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	... 7 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:217)
+	... 36 common frames omitted
+21:01:48.802 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+21:01:51.469 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+21:01:51.514 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:01:52.442 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:01:52.607 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+21:01:55.881 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:02:38.187 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s626ms924µs400ns).
+21:02:38.641 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+21:02:38.642 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+21:02:40.721 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:02:40.726 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:02:40.728 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:151)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:374)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1032)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:71)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:253)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:146)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.lambda$processNext$0(JdbcValuesResultSetImpl.java:89)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:274)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:89)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:142)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:102)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2750)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2742)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:75)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:153)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:98)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:143)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:102)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:546)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	... 7 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:217)
+	... 36 common frames omitted
+21:03:57.961 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+21:04:00.754 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+21:04:00.805 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:04:01.796 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:04:02.004 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+21:04:04.994 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:04:46.246 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+21:04:46.248 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+21:04:49.462 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:04:49.468 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:04:49.469 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:152)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:374)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1032)
+	at org.hibernate.query.Query.getResultList(Query.java:94)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:72)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select c1_0.id,c1_0.changed_at,c1_0.ligth_id,c1_0.new_color_id,c1_0.old_color_id from Color_history c1_0 where c1_0.new_color_id=?]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:253)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:146)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.lambda$processNext$0(JdbcValuesResultSetImpl.java:89)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advance(JdbcValuesResultSetImpl.java:274)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:85)
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:29)
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:89)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:142)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.loader.ast.internal.SingleUniqueKeyEntityLoaderStandard.load(SingleUniqueKeyEntityLoaderStandard.java:102)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2750)
+	at org.hibernate.persister.entity.AbstractEntityPersister.loadByUniqueKey(AbstractEntityPersister.java:2742)
+	at org.hibernate.sql.results.graph.entity.internal.EntitySelectFetchByUniqueKeyInitializer.initializeInstance(EntitySelectFetchByUniqueKeyInitializer.java:75)
+	at org.hibernate.sql.results.internal.StandardRowReader.coordinateInitializers(StandardRowReader.java:153)
+	at org.hibernate.sql.results.internal.StandardRowReader.readRow(StandardRowReader.java:98)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:143)
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:32)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:443)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:166)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$0(ConcreteSqmSelectQueryPlan.java:102)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:305)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:546)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363)
+	... 7 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець c1_0.ligth_id не існує
+  Подсказка: Можливо, передбачалось посилання на стовпець "c1_0.light_id".
+  Позиция: 32
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:217)
+	... 36 common frames omitted
+21:10:23.122 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+21:10:25.692 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+21:10:25.751 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:10:26.608 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:10:26.782 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+21:10:30.045 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:11:16.648 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+21:11:16.649 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: insert або update в таблиці "lights" порушує обмеження зовнішнього ключа "lights_color_id_fkey"
+  Подробности: Ключ (color_id)=(11) не присутній в таблиці "colors".
+21:11:21.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:11:21.453 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:11:27.276 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:146)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:175)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:182)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:741)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:719)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:74)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:95)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3285)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3895)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:735)
+	... 6 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: insert або update в таблиці "lights" порушує обмеження зовнішнього ключа "lights_color_id_fkey"
+  Подробности: Ключ (color_id)=(11) не присутній в таблиці "colors".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 24 common frames omitted
+21:12:43.938 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+21:12:46.689 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+21:12:46.726 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:12:47.624 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:12:47.789 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+21:12:51.361 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21:14:16.104 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s742ms636µs600ns).
+21:15:53.079 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s869ms482µs900ns).
+21:18:40.427 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s317ms515µs300ns).
+21:19:47.087 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s659ms613µs300ns).
+21:20:37.460 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s373ms234µs300ns).
+21:20:37.649 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+21:20:37.650 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ПОМИЛКА: стовпець "ligth_id" зв'язку "color_history" не існує
+  Позиция: 40
+21:20:43.924 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:20:43.951 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:20:45.748 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : could not execute statement
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:146)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: jakarta.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:165)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:175)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:182)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:741)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:719)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:119)
+	... 4 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3285)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3895)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:735)
+	... 6 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ПОМИЛКА: стовпець "ligth_id" зв'язку "color_history" не існує
+  Позиция: 40
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 24 common frames omitted
