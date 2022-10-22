@@ -33,108 +33,95 @@ public class LightshowHistoryCommand implements Command<Map<String, List<ColorHi
             entityManager = sessionFactory.createEntityManager();
             entityManager.getTransaction().begin();
 
-            // -	Якщо у списку кольорів є неіснуючі - завершити виконання програми з помилкою
-            TypedQuery<String> queryColorsFromColorsDB = entityManager.createQuery(
-                    "select c.name from Color c", String.class);
-            List<String> colorsFromColorsDB = queryColorsFromColorsDB.getResultList();
-            if (!(colorsFromColorsDB.containsAll(context.colors()))) {
-                throw new LightshowException("There are non-existent colors in the list like " +
-                        "'white black brown red orange yellow green blue purple grey'");
-            }
+            // Check user list for non-existent colors
+            // Check switching interval (must be >= 1)
+            // Check number of switching (must be >= 1)
+            checkColorIntervalSwitching(entityManager);
 
-            // -	Якщо інтервал меньше 1, вийти з помилкою
-            if (context.switchingInterval() < 1) {
-                throw new LightshowException("The interval is less than 1");
-            }
+            // Get all Entity from ColorsDB
+            TypedQuery<Color> queryEntityFromColorsDB = entityManager.createQuery(
+                    "select c from Color c", Color.class);
+            List<Color> allEntityFromColorsDB = queryEntityFromColorsDB.getResultList();
 
-            // -	Якщо кількість переключень меньше 1, вийти з помилкою
-            if (context.numberOfSwitching() < 1) {
-                throw new LightshowException("The number of switches is less than 1");
-            }
+            // Create list Entity for Color from User request
+            List<Color> listEntityForColorFromUserRequest =
+                    createListEntityForColorFromUserRequest(allEntityFromColorsDB);
 
-            // -	Якщо світильник із таким label не існує, створити новий Light із випадковим
-            // початковим кольором зі списку
-            // возьмем названия всех светильников из базы
+            // Create a new Light
+            // Get the names of all light from the LightsDB
             TypedQuery<String> queryLabelNameFromLights = entityManager.createQuery(
                     "select l.label from Light l", String.class);
             List<String> labelNameFromLights = queryLabelNameFromLights.getResultList();
+
             int index;
             if (!(labelNameFromLights.contains(context.label()))) {
+                index = new Random().nextInt(context.colors().size());
+
+                var randomColorEntityFromUserRequest =
+                        listEntityForColorFromUserRequest.get(index);
+
                 Light light = new Light();
                 light.setLabel(context.label());
-                index = new Random().nextInt(context.colors().size() + 1);
-
-                Color c = new Color();
-                c.setId((long) index);
-                //c.setName(context.colors().get(index));
-
-                light.setColor(c);
+                light.setColor(randomColorEntityFromUserRequest);
                 light.setEnabled(false);
 
                 entityManager.persist(light);
             }
 
             // Get Entity from Lights from DB for label
-            TypedQuery<Light> queryEntityFromLightsForLabel = entityManager.createQuery(
+            TypedQuery<Light> queryEntityFromLightsDBForLabel = entityManager.createQuery(
                     "select l from Light l where l.label = ?1", Light.class);
-            queryEntityFromLightsForLabel.setParameter(1, context.label());
-            List<Light> entityFromLights = queryEntityFromLightsForLabel.getResultList();
-            Light light = entityFromLights.get(0);
+            queryEntityFromLightsDBForLabel.setParameter(1, context.label());
+            List<Light> entityFromLightsDBForLabel = queryEntityFromLightsDBForLabel.getResultList();
+            Light light = entityFromLightsDBForLabel.get(0);
 
-            // -	Якщо світильник існує, але він наразі є enabled - true -
-            // завершити виконання програми з помилкою
+            // Check enabled
             if (light.isEnabled()) {
                 throw new LightshowException("The light exists, but it is currently enabled");
             }
 
-            // Если светильник есть и он enabled - false
-            // 1.	Зробити світильник enabled = true
+            // Light's operation
             light.setEnabled(true);
-
             long count = context.numberOfSwitching();
-            Color oldColor;  // !!!!!!!!!!!!!!!!!!
-            String oldColorName;
-            String newColorName;
-            List<ColorHistoryRecord> colorHistoryRecord = new ArrayList<>();
+            Color oldEntityColor;
+            Color newEntityColor;
             do {
-                // 2.	Змінити його колір на випадковий зі списку (окрім поточного),
-                // створивши відповідний запис в історії змін і записавши лог операції
-                // в форматі (Light ‘my light’ changed color from ‘red’ to ‘yellow’ at {{ISO timestamp}})
-                oldColor = light.getColor();
-                oldColorName = light.getColor().getName();
+                // Change the light's Color
+                oldEntityColor = light.getColor();
                 do {
-                    index = new Random().nextInt(context.colors().size() + 1);
-                    newColorName = context.colors().get(index);
-                } while (newColorName.equals(oldColorName));
-                light.getColor().setName(newColorName);
+                    index = new Random().nextInt(context.colors().size());
+                    newEntityColor = listEntityForColorFromUserRequest.get(index);
+                } while (oldEntityColor.getName().equals(newEntityColor.getName()));
+                light.setColor(newEntityColor);
 
-                Timestamp executionTime = Timestamp.from(LocalDate.now().atStartOfDay().toInstant(ZoneOffset.UTC)); // DateLocalTime
+                light.setEnabled(false);
 
+                Timestamp executionTime = Timestamp.from(LocalDate.now().atStartOfDay().toInstant(ZoneOffset.UTC));
+
+                // Create ColorHistoryRecord
                 ColorHistoryRecord colorHistory = new ColorHistoryRecord();
-                colorHistory.setId();
                 colorHistory.setLight(light);
-                colorHistory.setOldColor(oldColor);
+                colorHistory.setOldColor(oldEntityColor);
                 colorHistory.setNewColor(light.getColor());
                 colorHistory.setChangedAt(executionTime);
 
                 entityManager.persist(colorHistory);
 
-                colorHistoryRecord.add(colorHistory);
-
-                // 3.	Почекати заданий інтервал (Thread.sleep)
-                // приймає значення в мс, тож привести введене значення * 1000
                 Thread.sleep(context.switchingInterval() * 1000);
 
                 count--;
             } while (count != 0);
 
-            // 5.	Виставити enabled = false
-            light.setEnabled(false);
+            // Get all ColorHistoryRecord from ColorHistoryDB
+            TypedQuery<ColorHistoryRecord> queryEntityFromColorHistoryDB = entityManager.createQuery(
+                    "select ch from ColorHistoryRecord ch", ColorHistoryRecord.class);
+            List<ColorHistoryRecord> entityFromColorHistoryDB = queryEntityFromColorHistoryDB.getResultList();
+
+            Map<String, List<ColorHistoryRecord>> collectionDTO = new LinkedHashMap<>();
+            collectionDTO.put(context.label(), entityFromColorHistoryDB);
 
             entityManager.getTransaction().commit();
 
-            Map<String, List<ColorHistoryRecord>> collectionDTO = new LinkedHashMap<>();
-            collectionDTO.put(context.label(), colorHistoryRecord);
             return collectionDTO;
 
         } catch (LightshowException e) {
@@ -146,6 +133,39 @@ public class LightshowHistoryCommand implements Command<Map<String, List<ColorHi
             }
             throw new LightshowException(e);
         }
+    }
+
+    private void checkColorIntervalSwitching(EntityManager entityManager) throws LightshowException {
+        // Check user list for non-existent colors
+        TypedQuery<String> queryColorsFromColorsDB = entityManager.createQuery(
+                "select c.name from Color c", String.class);
+        List<String> colorsFromColorsDB = queryColorsFromColorsDB.getResultList();
+        if (!(new HashSet<>(colorsFromColorsDB).containsAll(context.colors()))) {
+            throw new LightshowException("There are non-existent colors in the list like " +
+                    "'white black brown red orange yellow green blue purple grey'");
+        }
+
+        // Check switching interval (must be >= 1)
+        if (context.switchingInterval() < 1) {
+            throw new LightshowException("The interval is less than 1");
+        }
+
+        // Check number of switching (must be >= 1)
+        if (context.numberOfSwitching() < 1) {
+            throw new LightshowException("The number of switches is less than 1");
+        }
+    }
+
+    private List<Color> createListEntityForColorFromUserRequest(List<Color> allEntityFromColorsDB) {
+        List<Color> listEntityForColorFromUserRequest = new ArrayList<>();
+        for (String s : context.colors()) {
+            for (Color c : allEntityFromColorsDB) {
+                if (s.equals(c.getName())) {
+                    listEntityForColorFromUserRequest.add(c);
+                }
+            }
+        }
+        return listEntityForColorFromUserRequest;
     }
 
 }

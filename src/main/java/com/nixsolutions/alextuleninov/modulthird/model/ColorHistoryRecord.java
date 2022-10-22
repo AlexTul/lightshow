@@ -12,17 +12,17 @@ public class ColorHistoryRecord {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.DETACH)
-    @JoinColumn(name = "ligth_id")
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "light_id")
     @Access(AccessType.PROPERTY)
     private Light light;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "old_color_id")
     @Access(AccessType.PROPERTY)
     private Color oldColor;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.DETACH)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "new_color_id")
     @Access(AccessType.PROPERTY)
     private Color newColor;
@@ -50,16 +50,16 @@ public class ColorHistoryRecord {
         return oldColor;
     }
 
-    public void setOldColor(Color old_color) {
-        this.oldColor = old_color;
+    public void setOldColor(Color oldColor) {
+        this.oldColor = oldColor;
     }
 
     public Color getNewColor() {
         return newColor;
     }
 
-    public void setNewColor(Color new_color) {
-        this.newColor = new_color;
+    public void setNewColor(Color newColor) {
+        this.newColor = newColor;
     }
 
     public Timestamp getChangedAt() {
@@ -69,4 +69,5 @@ public class ColorHistoryRecord {
     public void setChangedAt(Timestamp changedAt) {
         this.changedAt = changedAt;
     }
+
 }

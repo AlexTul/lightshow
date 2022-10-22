@@ -2,7 +2,6 @@ package com.nixsolutions.alextuleninov.modulthird.model;
 
 import jakarta.persistence.*;
 
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -16,16 +15,13 @@ public class Light {
     @Column(nullable = false, unique = true)
     private String label;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "color_id")
     @Access(AccessType.PROPERTY)
     private Color color;
 
     @Column(nullable = false)
     private boolean enabled;
-
-    @OneToMany(mappedBy = "light")
-    List<ColorHistoryRecord> colorHistoryRecordList;
 
     public Long getId() {
         return id;
@@ -57,14 +53,6 @@ public class Light {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
-    }
-
-    public List<ColorHistoryRecord> getColorHistoryRecordList() {
-        return colorHistoryRecordList;
-    }
-
-    public void setColorHistoryRecordList(List<ColorHistoryRecord> colorHistoryRecordList) {
-        this.colorHistoryRecordList = colorHistoryRecordList;
     }
 
     @Override

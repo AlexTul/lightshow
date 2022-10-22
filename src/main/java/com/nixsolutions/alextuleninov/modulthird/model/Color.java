@@ -15,15 +15,6 @@ public class Color {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @OneToOne(mappedBy = "color")
-    private Light light;
-
-    @OneToOne(mappedBy = "oldColor")
-    private ColorHistoryRecord colorHistoryRecordOld;
-
-    @OneToOne(mappedBy = "newColor")
-    private ColorHistoryRecord colorHistoryRecordNew;
-
     public Long getId() {
         return id;
     }
@@ -38,30 +29,6 @@ public class Color {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Light getLight() {
-        return light;
-    }
-
-    public void setLight(Light light) {
-        this.light = light;
-    }
-
-    public ColorHistoryRecord getColorHistoryRecordOld() {
-        return colorHistoryRecordOld;
-    }
-
-    public void setColorHistoryRecordOld(ColorHistoryRecord colorHistoryRecord) {
-        this.colorHistoryRecordOld = colorHistoryRecord;
-    }
-
-    public ColorHistoryRecord getColorHistoryRecordNew() {
-        return colorHistoryRecordNew;
-    }
-
-    public void setColorHistoryRecordNew(ColorHistoryRecord colorHistoryRecordNew) {
-        this.colorHistoryRecordNew = colorHistoryRecordNew;
     }
 
     @Override

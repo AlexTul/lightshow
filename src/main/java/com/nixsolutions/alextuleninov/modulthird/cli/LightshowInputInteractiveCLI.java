@@ -30,7 +30,7 @@ public class LightshowInputInteractiveCLI {
         System.out.println("Enter light's label:");
         String label = scanner.nextLine();
 
-        System.out.println("Enter color's list like " +
+        System.out.println("Enter color's list as like " +
                 "'white black brown red orange yellow green blue purple grey':");
         String consoleColorList = scanner.nextLine();
         colorList = Arrays.asList(consoleColorList.split(" "));
@@ -67,15 +67,15 @@ public class LightshowInputInteractiveCLI {
         Set<String> keySetLabel = input.keySet();
         String keyLabel = keySetLabel.stream()
                 .findFirst()
-                .get();
+                .orElse(null);
 
         List<ColorHistoryRecord> colorHistoryRecords = input.get(keyLabel);
 
         StringBuilder result = new StringBuilder("Light '");
-        result.append(keyLabel).append("' changed color '").append(colorHistoryRecords.get(0).getOldColor());
+        result.append(keyLabel).append("' changed color '").append(colorHistoryRecords.get(0).getOldColor().getName());
 
         for (ColorHistoryRecord in : colorHistoryRecords) {
-            result.append("' => '").append(in.getNewColor());
+            result.append("' => '").append(in.getNewColor().getName());
         }
         result.append("'\n");
 
@@ -87,7 +87,7 @@ public class LightshowInputInteractiveCLI {
         Set<String> keySetLabel = input.keySet();
         String keyLabel = keySetLabel.stream()
                 .findFirst()
-                .get();
+                .orElse(null);
 
         for (ColorHistoryRecord c : input.get(keyLabel)) {
             log.info("Light '{}' changed color from '{}' to '{}' at {}",
