@@ -2793,3 +2793,91 @@ java.lang.ClassCastException: class com.nixsolutions.alextuleninov.modulthird.mo
 09:44:58.799 [main] INFO  c.n.a.m.c.LightshowInputInteractiveCLI - Light 'newLight' changed color from 'black' to 'red' at 2022-10-22 03:00:00.0
 09:44:58.800 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 09:44:58.803 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+18:47:29.321 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+18:47:30.839 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+18:47:30.855 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:47:31.233 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:47:31.344 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:47:32.744 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:47:52.824 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:47:52.827 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+18:47:52.828 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.IllegalArgumentException: Argument [second] of type [java.lang.String] did not match parameter type [com.nixsolutions.alextuleninov.modulthird.model.Light (n/a)]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:135)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.IllegalArgumentException: Argument [second] of type [java.lang.String] did not match parameter type [com.nixsolutions.alextuleninov.modulthird.model.Light (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:84)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:31)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:339)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:129)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:949)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:732)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:129)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:118)
+	... 4 common frames omitted
+18:50:11.167 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+18:50:12.454 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+18:50:12.469 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:50:12.978 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:50:13.082 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:50:14.403 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:50:28.976 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:50:28.983 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+18:50:28.984 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.IllegalArgumentException: Argument [8] of type [java.lang.Long] did not match parameter type [com.nixsolutions.alextuleninov.modulthird.model.Light (n/a)]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:135)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.IllegalArgumentException: Argument [8] of type [java.lang.Long] did not match parameter type [com.nixsolutions.alextuleninov.modulthird.model.Light (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:84)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:31)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:339)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:129)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:949)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:732)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:129)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:118)
+	... 4 common frames omitted
+18:52:40.121 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+18:52:41.472 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+18:52:41.487 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:52:41.845 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:52:41.935 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:52:43.414 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:52:57.513 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:52:57.517 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+18:52:57.517 [main] ERROR c.n.a.modulthird.LightshowApp - Error during user interaction
+com.nixsolutions.alextuleninov.modulthird.exceptions.LightshowException: java.lang.IllegalArgumentException: Argument [1] of type [java.lang.Integer] did not match parameter type [com.nixsolutions.alextuleninov.modulthird.model.Light (n/a)]
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:135)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:16)
+	at com.nixsolutions.alextuleninov.modulthird.cli.LightshowInputInteractiveCLI.run(LightshowInputInteractiveCLI.java:53)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.run(LightshowApp.java:30)
+	at com.nixsolutions.alextuleninov.modulthird.LightshowApp.main(LightshowApp.java:16)
+Caused by: java.lang.IllegalArgumentException: Argument [1] of type [java.lang.Integer] did not match parameter type [com.nixsolutions.alextuleninov.modulthird.model.Light (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:84)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:31)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:339)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:129)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:949)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:732)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1246)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:129)
+	at com.nixsolutions.alextuleninov.modulthird.command.LightshowHistoryCommand.execute(LightshowHistoryCommand.java:118)
+	... 4 common frames omitted
+18:53:38.307 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.4.Final
+18:53:39.652 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+18:53:39.666 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18:53:40.061 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18:53:40.138 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:53:41.376 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18:54:01.920 [main] INFO  c.n.a.m.c.LightshowInputInteractiveCLI - Light 'second' changed color from 'black' to 'white' at 2022-10-22 03:00:00.0
+18:54:01.921 [main] INFO  c.n.a.m.c.LightshowInputInteractiveCLI - Light 'second' changed color from 'white' to 'black' at 2022-10-22 03:00:00.0
+18:54:01.923 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:54:01.928 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

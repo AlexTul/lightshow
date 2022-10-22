@@ -114,7 +114,8 @@ public class LightshowHistoryCommand implements Command<Map<String, List<ColorHi
 
             // Get all ColorHistoryRecord from ColorHistoryDB
             TypedQuery<ColorHistoryRecord> queryEntityFromColorHistoryDB = entityManager.createQuery(
-                    "select ch from ColorHistoryRecord ch", ColorHistoryRecord.class);
+                    "select ch from ColorHistoryRecord ch where ch.light = ?1", ColorHistoryRecord.class);
+            queryEntityFromColorHistoryDB.setParameter(1, light);
             List<ColorHistoryRecord> entityFromColorHistoryDB = queryEntityFromColorHistoryDB.getResultList();
 
             Map<String, List<ColorHistoryRecord>> collectionDTO = new LinkedHashMap<>();
