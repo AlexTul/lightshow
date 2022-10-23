@@ -33,10 +33,11 @@ public class LightshowHistoryCommand implements Command<Map<String, List<ColorHi
             entityManager = sessionFactory.createEntityManager();
             entityManager.getTransaction().begin();
 
+            // Check light's label for empty or contain only whitespace code points
             // Check user list for non-existent colors
             // Check switching interval (must be >= 1)
             // Check number of switching (must be >= 1)
-            checkColorIntervalSwitching(entityManager);
+            checkColorIntervalSwitching(entityManager, context);
 
             // Get all Entity from ColorsDB
             TypedQuery<Color> queryEntityFromColorsDB = entityManager.createQuery(
@@ -136,7 +137,13 @@ public class LightshowHistoryCommand implements Command<Map<String, List<ColorHi
         }
     }
 
-    private void checkColorIntervalSwitching(EntityManager entityManager) throws LightshowException {
+    private void checkColorIntervalSwitching(EntityManager entityManager, CreateInputRequest context) throws LightshowException {
+        // Check light's label for empty or contain only whitespace code points
+        if (context.label().isBlank()) {
+            throw new LightshowException(
+                    "The light's label must not be empty or contain only whitespace code points'");
+        }
+
         // Check user list for non-existent colors
         TypedQuery<String> queryColorsFromColorsDB = entityManager.createQuery(
                 "select c.name from Color c", String.class);
